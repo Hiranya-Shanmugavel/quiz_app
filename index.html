@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiz Master - a responsive 10-question quiz application.">
+  <title>Quiz Master | Test Your Knowledge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Quiz Master home"><span class="brand-mark">Q</span><span>quiz<span class="brand-light">master</span></span></a>
+      <span class="top-note"><span class="live-dot"></span> QUICK KNOWLEDGE CHECK</span>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="eyebrow">CHALLENGE YOURSELF</div>
+      <h1>A little quiz.<br><span>A lot of knowledge.</span></h1>
+      <p>Ten questions covering web, programming and computer fundamentals. See what you know!</p>
+      <div class="details">
+        <div><span class="detail-icon">◷</span><span><strong>5–7 min</strong><small>Estimated time</small></span></div>
+        <div><span class="detail-icon">▤</span><span><strong>10 questions</strong><small>Multiple choice</small></span></div>
+        <div><span class="detail-icon">★</span><span><strong>10 points</strong><small>Maximum score</small></span></div>
+      </div>
+      <button class="primary-btn start-btn" id="start-btn">Start the quiz <span>→</span></button>
+      <div class="intro-foot">No pressure. Just have fun and learn something new.</div>
+    </section>
+
+    <section class="quiz-card hidden" id="quiz" aria-live="polite">
+      <div class="quiz-head">
+        <div><span class="eyebrow">YOUR QUIZ</span><h2>Knowledge check</h2></div>
+        <div class="score-pill">★ <span id="score">0</span> points</div>
+      </div>
+      <div class="progress-meta"><span id="question-count">QUESTION 01 / 10</span><span id="progress-percent">10%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-area">
+        <div class="question-tag" id="category">WEB BASICS</div>
+        <h3 id="question-text"></h3>
+        <div class="answers" id="answers"></div>
+        <div class="feedback hidden" id="feedback" role="status"></div>
+      </div>
+      <div class="quiz-footer">
+        <span id="answered-note">Choose one answer to continue.</span>
+        <button class="primary-btn next-btn" id="next-btn" disabled>Next question <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="result-card hidden" id="results">
+      <div class="result-icon" id="result-icon">🏆</div>
+      <div class="eyebrow">QUIZ COMPLETED</div>
+      <h2 id="result-title">Great effort!</h2>
+      <p id="result-copy">You made it to the finish.</p>
+      <div class="result-score"><strong id="final-score">0</strong><span>/ 10</span></div>
+      <div class="result-caption">YOUR FINAL SCORE</div>
+      <div class="result-track"><div id="result-fill"></div></div>
+      <div class="result-stats">
+        <div><strong id="correct-count">0</strong><span>Correct</span></div>
+        <div><strong id="wrong-count">0</strong><span>Incorrect</span></div>
+        <div><strong id="percent-score">0%</strong><span>Accuracy</span></div>
+      </div>
+      <button class="primary-btn restart-btn" id="restart-btn">↻ &nbsp;Try again</button>
+      <p class="result-foot">Every attempt is a chance to learn something new.</p>
+    </section>
+
+    <footer class="footer"><span>© 2026 Quiz Master</span><span>Learn something every day <b>✦</b></span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
